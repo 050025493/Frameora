@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width , initial-scale=1.0">
-        <title>Frameora</title>
+        <title>Perfume Network</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -95,7 +96,8 @@
                 </div>
             </div>
         </main>
-
+    
+    <!--Marquee-->
    <div class="marquee-container">
     <div class="marquee-track">
    
@@ -104,7 +106,8 @@
     
      </div>
     </div>
-   
+    
+    <!--image sliding-->
     <div class="container">
         <div class="image-slider">
             <div class="img-track">
@@ -141,14 +144,27 @@
         <h2 class="collection-heading">OUR AUTHENTIC COLLECTIONS</h2>
         <div class="collection-content">
             <ul class="collection-images">
+                
                 <li class="collection-image">
-                    <img src="assets/imagea.svg" alt="" class="authentic-image">
+                    <div class="collection-image-wrapper">
+                   <img src="assets/imagea.svg">
+                   <span class="text">Explore</span>
+                
+                </div>
                 </li>
                 <li class="collection-image">
-                    <img src="assets/imageb.svg" alt="" class="authentic-image">
+                    <div class="collection-image-wrapper">
+                   <img src="assets/imageb.svg">
+                   <span class="text">Explore</span>
+                
+                </div>
                 </li>
-                <li class="collection-image">
-                    <img src="assets/imagec.svg" alt="" class="authentic-image">
+                 <li class="collection-image">
+                    <div class="collection-image-wrapper">
+                   <img src="assets/imagec.svg">
+                   <span class="text">Explore</span>
+                
+                </div>
                 </li>
             </ul>
             
@@ -156,9 +172,137 @@
     </section>
 
 
+    <!-- Top Picks-->
+    <section id="perfume-section-wrapper">
+    <div class="perfume-container">
+        <h2 class="perfume-heading">Top Picks</h2>
+
+        <div class="perfume-content">
+            <div class="perfume-left">
+                <div class="swiper perfume-text-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h3 class="perfume-title">Indulge in Fine Fragrances</h3>
+                            <p class="perfume-price">$29</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h3 class="perfume-title">Experience True Elegance</h3>
+                            <p class="perfume-price">$35</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h3 class="perfume-title">Captivating Aromas</h3>
+                            <p class="perfume-price">$25</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h3 class="perfume-title">Timeless Scents</h3>
+                            <p class="perfume-price">$40</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h3 class="perfume-title">Klub Man Perfume</h3>
+                            <p class="perfume-price">$29</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h3 class="perfume-title">Midnight Oud</h3>
+                            <p class="perfume-price">$50</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="perfume-actions">
+                    <button class="perfume-btn-buy">Buy Now</button>
+                    <button class="perfume-btn-view">View Products <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path class="arrow" fill-rule="evenodd" clip-rule="evenodd" d="M9 4L7 6L13 12L7 18L9 20L17 12L9 4Z" fill="#83573D"/>
+</svg></button>
+                </div>
+                <div class="swiper-pagination perfume-pagination"></div>
+            </div>
+
+            <div class="perfume-right">
+                <div class="swiper perfume-image-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assets/tp1.svg"></div>
+                        <div class="swiper-slide"><img src="assets/tp2.svg"></div>
+                        <div class="swiper-slide"><img src="assets/tp3.svg"></div>
+                        <div class="swiper-slide"><img src="assets/tp4.svg"></div>
+                        <div class="swiper-slide"><img src="assets/tp5.svg"></div>
+                        <div class="swiper-slide"><img src="assets/tp6.svg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <div class="seperator"></div>
+
+<!--Reviews-->
+    <section class="review-section">
+        <h2 class="review-heading">What Our Clients Are Saying</h2>
+        <div class="review-section-content">
+            <ul class="review">
+                <li class="user-review">
+                    <div class="user-profile">
+                        <img src="" alt="" class="user-image">
+                        <p class="user-name"></p>
+                        <p class="date-review"></p>
+                    </div>
+                    <div class="user-rating"></div>
+                    <div class="user-text"></div>
+                    <div class="people-reaction">
+
+                    </div>
+                </li>
+                 <li class="user-review">
+                    <div class="user-profile">
+                        <img src="" alt="" class="user-image">
+                        <p class="user-name"></p>
+                        <p class="date-review"></p>
+                    </div>
+                    <div class="user-rating"></div>
+                    <div class="user-text"></div>
+                    <div class="people-reaction">
+
+                    </div>
+                </li>
+                 <li class="user-review">
+                    <div class="user-profile">
+                        <img src="" alt="" class="user-image">
+                        <p class="user-name"></p>
+                        <p class="date-review"></p>
+                    </div>
+                    <div class="user-rating"></div>
+                    <div class="user-text"></div>
+                    <div class="people-reaction">
+
+                    </div>
+                </li>
+                 <li class="user-review">
+                    <div class="user-profile">
+                        <img src="" alt="" class="user-image">
+                        <p class="user-name"></p>
+                        <p class="date-review"></p>
+                    </div>
+                    <div class="user-rating"></div>
+                    <div class="user-text"></div>
+                    <div class="people-reaction">
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+    </section>
+
+
+    
 
 
 
+
+         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="script.js"></script>
+        
+
     </body>
 </html>

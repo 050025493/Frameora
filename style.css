@@ -7,6 +7,13 @@
     font-family: "Kaisei Decol",serif;
 }
 
+:root{
+    
+  --smooth-ease: cubic-bezier(0.74, 0, 0.3, 1);
+  --text-muted: #827B7B;
+
+}
+
 
 /* whole page stylin*/
 body{
@@ -183,7 +190,7 @@ header .navbar .nav-menu{
     align-items: center;
     
     width: 1236px;
-      margin: 0 auto;
+    margin: 0 auto;
     gap: 90px;
     }
 
@@ -237,7 +244,7 @@ flex-shrink: 0;
     padding: 40px;
   display: flex;
   white-space: nowrap; 
-  animation: scrolling 20s linear infinite; 
+  animation: scrolling 15s linear infinite; 
 }
 
 .marquee-track img {
@@ -283,6 +290,7 @@ flex-shrink: 0;
     
 }
 .container .image-slider .img-track{
+    
     
     
     display: flex;
@@ -401,8 +409,8 @@ flex-shrink: 0;
 
 }
 .collection{
-    padding: 50px 0 100px;
-    background: linear-gradient(180deg, var(--bg-primary, #FDF0E0) 0%, #F6CFB8 99.38%);;
+    padding: 50px 0 20px;
+    background: linear-gradient(180deg, var(--bg-primary, #FDF0E0) 0%, #f5d9ca 99.38%);;
 }
 
 .collection .collection-heading{
@@ -425,9 +433,288 @@ flex-shrink: 0;
     padding: 120px;
     justify-content: center;
      gap:100px;
+     
+}
+
+ .collection-images .collection-image-wrapper{
+    border-radius: 10px;
+    position: relative;     
+    overflow: hidden; 
+    background: linear-gradient(145deg, rgba(232, 193, 170, 0.60) 2.9%, rgba(138, 98, 74, 0.60) 70.39%);
+    cursor: pointer;
+}
+
+ .collection-images .collection-image-wrapper::after{
+     content: "";
+    position: absolute;
+    inset: 0;
+    
+    background: linear-gradient(145deg, rgba(232, 193, 170, 0.60) 2.9%, rgba(138, 98, 74, 0.60) 70.39%);
+    
+    opacity: 0;
+    
+   clip-path: inset(100% 0 0 0 round 10px);
+    transition: clip-path 200ms cubic-bezier(0.74, 0, 0.3, 1);
+   
+    z-index: 1;
+}
+.collection-images .collection-image-wrapper:hover::after{
+    opacity: .8;
+    clip-path: inset(0 0 0 0 round 10px);
+    
+    
+}
+
+.collection .collection-image-wrapper .text{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    justify-content: center;
+    font-size: 32px;
+    opacity: 0;
+    color: white;
+    transform: scale(0.96);
+    transition:
+        opacity 300ms ease,
+        transform 450ms cubic-bezier(0.74, 0, 0.3, 1);
+    
+}
+
+.collection .collection-image-wrapper .text:hover{
+    opacity:1;
+     transform: scale(1);
+    
 }
 
 
+/*top picks*/
+
+#perfume-section-wrapper {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #FDF6EC;
+    
+    background-image: url("assets/FINAL.png"); 
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+#perfume-section-wrapper .perfume-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#perfume-section-wrapper .perfume-heading {
+    text-align: center;
+    font-family: "Kaisei Decol", serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: #83573D;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+#perfume-section-wrapper .perfume-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* --- left side */
+#perfume-section-wrapper .perfume-left {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+#perfume-section-wrapper .perfume-text-swiper {
+    width: 100%;
+    height: 180px ;   /* important height*/
+    margin-bottom: 25px;
+}
+
+#perfume-section-wrapper .perfume-text-swiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#perfume-section-wrapper .perfume-title {
+    font-family: "Kaisei Decol", serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #1C170D;
+    line-height: 1.2;
+    margin: 0;
+   
+    
+    white-space: normal;
+}
+
+#perfume-section-wrapper .perfume-price {
+    font-family: "Kaisei Decol", serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #000;
+    margin-top: 10px;
+    line-height: 1;
+}
+
+/* --- BUTTONS --- */
+#perfume-section-wrapper .perfume-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+#perfume-section-wrapper .perfume-btn-buy {
+    background: #7F573F;
+    color: #FFF;
+    border: 1px solid #7F573F ;
+    border-radius: 10px;
+    padding: 12px 45px;
+    font-family: "Kaisei Decol", serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    
+    
+}
+
+#perfume-section-wrapper .perfume-btn-view {
+    background: transparent;
+    color: #83573D;
+    border: 1px solid #83573D;
+    border-radius: 10px;
+    padding: 15px 50px;
+    font-family: "Kaisei Decol", serif;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    transition: all .3s ease-in-out;
+   
+}
+
+#perfume-section-wrapper .perfume-btn-buy:hover{
+    background: transparent;
+    color: #7F573F;
+}
+#perfume-section-wrapper .perfume-btn-view:hover {
+     background: #83573D;
+    color: #ffffff;
+    
+}
+#perfume-section-wrapper .perfume-btn-view:hover svg path {
+    fill: #FFF;
+    transition: fill 0.3s ease;
+}
+
+
+/* --- PAGINATION --- */
+#perfume-section-wrapper .perfume-pagination {
+    position: static ;
+    text-align: left ;
+    margin-top: 10px;
+}
+
+#perfume-section-wrapper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #D9D9D9;
+    opacity: 1;
+    margin-right: 8px ;
+}
+
+#perfume-section-wrapper .swiper-pagination-bullet-active {
+    background: #83573D;
+}
+
+/* --- RIGHT SIDE (Images) --- */
+#perfume-section-wrapper .perfume-right {
+    width: 50%;
+    position: relative;
+    height: 450px;
+}
+
+#perfume-section-wrapper .perfume-image-swiper {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+}
+
+#perfume-section-wrapper .perfume-image-swiper .swiper-slide {
+    width: 320px; /* Card width */
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    opacity: 0.5;
+    transform: scale(0.85);
+}
+
+#perfume-section-wrapper .perfume-image-swiper .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+#perfume-section-wrapper .perfume-image-swiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s ease;
+}
+#perfume-section-wrapper .perfume-image-swiper img:hover{
+    transform: scale(1.5);
+}
+
+
+.seperator{
+    height: 10px;
+    width: 100%;
+    background: #d4916a;
+}
+/*review*/
+
+.review-section{
+    padding:70px 0 100px;
+    background-image: url("assets/review.png");
+    background-position: center;
+    background-size: cover;
+   
+}
+.review-section .review-heading{
+    color: #FFF;
+
+text-align: center;
+font-feature-settings: 'dlig' on;
+
+font-size: 44px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px;
+}
 
 
 
