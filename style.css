@@ -714,9 +714,69 @@ font-size: 44px;
 font-style: normal;
 font-weight: 500;
 line-height: 28px;
+padding:40px 0 90px;
+}
+.review-section  .review{
+    display: flex;
+
+padding: 10px 10px;
+flex-direction: column;
+align-items:center;
+gap: 60px;
+
+
+
+}
+.review-section .review .user{
+    border-radius: 10px;
+background: #FFF;
+ width: 1274px;
+ justify-content: center;
+
+
+padding: 10px;
 }
 
+.review-section .review .user .user-profile{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+gap: 12px;
+align-self: stretch;
 
+}
+
+.review .user .user-profile .user-image{
+    width: 40px;
+    height: 40px;
+}
+.review .user .user-rating{
+    padding:12px 10px 12px;
+}
+
+.review .user .user-text{
+     padding:0 10px 12px;
+     color: #1C170D;
+
+font-feature-settings: 'dlig' on;
+font-family: "Kaisei Decol";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+align-self: stretch;
+
+}
+.review .user .people-reaction{
+    display: flex;
+    padding:0 10px 12px;
+    gap:36px;
+    align-items: bottom;
+    }
+.review .user .people-reaction .like{
+    width: 20px;
+    height: 20px;
+}
 
 
 
