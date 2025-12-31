@@ -76,13 +76,14 @@ header .top-row .left-zone{
 }
 .top-row .left-zone .search-bar{
     display: flex;
-     align-items: center;     /* now works correctly */
+     align-items: center;     
      gap: 8px;
 
   
     
 }
 input{
+    padding:0 0;
     border: none;
   outline: none;
   background: transparent;
@@ -91,9 +92,10 @@ input{
   margin: 0;
   margin-bottom: 0%;
 
-  line-height: 1;          /* IMPORTANT */
-  font-size: 16px;         /* match design */
+  line-height: 1;          
+  font-size: 16px;         
   color: var(--text-muted);
+  
   
 }
 
@@ -427,7 +429,7 @@ flex-shrink: 0;
 
 }
 
-.collection-content .collection-images{
+.collection .collection-content .collection-images{
     display: flex;
     flex-wrap: wrap;
     padding: 120px;
@@ -702,6 +704,7 @@ flex-shrink: 0;
     background-image: url("assets/review.png");
     background-position: center;
     background-size: cover;
+    height: 1350px;
    
 }
 .review-section .review-heading{
@@ -735,6 +738,13 @@ background: #FFF;
 
 
 padding: 10px;
+transition: transform .5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.review-section .review .user:hover{
+    transform:translateY(-10px);
+    filter: drop-shadow(-5px 6px 4px rgba(0,0,0,.25));
+
 }
 
 .review-section .review .user .user-profile{
@@ -744,6 +754,28 @@ padding: 10px;
 gap: 12px;
 align-self: stretch;
 
+}
+.review .user .user-profile .user-name{
+    color: #1C170D;
+
+font-feature-settings: 'dlig' on;
+font-family: "Kaisei Decol";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+}
+.review .user .user-profile .name-date{
+    
+    flex-direction: column;
+}
+.review .user .user-profile .date-review{
+    color: #83573D;
+
+font-feature-settings: 'dlig' on;
+font-family: "Kaisei Decol";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
 }
 
 .review .user .user-profile .user-image{
@@ -776,18 +808,204 @@ align-self: stretch;
 .review .user .people-reaction .like{
     width: 20px;
     height: 20px;
+    cursor: pointer;
+}
+
+.review .user .people-reaction .dislike{
+     width: 20px;
+    height: 20px;
+
+}
+
+.seperator-line{
+    background: linear-gradient(181deg, rgba(138, 98, 74, 0.90) -16.99%, rgba(193, 155, 132, 0.95) 23.35%, rgba(248, 213, 190, 0.90) 67.16%);
+   
+height: 136px;
+margin-top: 61px;
+
 }
 
 
+.shop-by-brand{
+    padding: 90px 0 70px;
+    background: rgba(248, 213, 190, 0.90);
+
+}
+
+.shop-by-brand .section-title{
+    padding :20px;
+    color: #83573D;
+
+    text-align: center;
+    font-feature-settings: 'dlig' on;
+    font-family: "Kaisei Decol";
+font-size: 48px;
+font-style: normal;
+font-weight: 500;
+line-height: 21px;
+text-transform: uppercase;
+    
+    
+}
+
+
+.shop-by-brand .shop-brand-content .brand-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0;
+    gap:40px;
+
+    
+}
+
+.shop-by-brand .shop-brand-content .brand-image{
+    border-radius: 10px;
+    position: relative;     
+    overflow: hidden; 
+    filter: drop-shadow(-8px 9px 4px rgba(0,0,0,.4));
+    border-radius: 30px;
+    
+    cursor: pointer;
+}
+
+.shop-by-brand .shop-brand-content .brand-image .shop-brand-box{
+
+    width: 223px;
+    height: 178px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    
+    background: white;
+    opacity:1;
+    transition: opacity 450ms cubic-bezier(0.86, 0, 0.16, 0.99);
+    filter: drop-shadow(-8px 9px 4px black);
+    
+    
+    
+  
+    
+    
+}
+
+
+.shop-by-brand .shop-brand-content .brand-image .shop-brand-box .brand-logo{
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 140px;
+height: 95px;
+aspect-ratio: 28/19;
+margin-left: 41px;
+margin-top: 36px;
+opacity: 1;
+transition: opacity 450ms cubic-bezier(0.86, 0, 0.16, 0.99);
+
+    
+   
+  
+
+}
+
+.shop-by-brand .shop-brand-content .brand-image .shop-brand-box .brand-logo:hover,.shop-by-brand .shop-brand-content .brand-image .shop-brand-box:hover{
+    opacity: 0;
+}
+
+
+/*ending part*/
+
+.ending-part{
+    
+    background:rgba(248, 213, 190, 0.90);
+   
+    
+}
+.ending-part .section-heading{
+    color: #83573D;
+
+text-align: center;
+font-feature-settings: 'dlig' on;
+font-family: "Kaisei Decol";
+font-size: 90px;
+font-style: normal;
+font-weight: 500;
+line-height: 40px;
+
+}
+.ending-part .section-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:100px 0 100px;
+    gap:80px;
+}
+.ending-part .section-content .section-text{
+    color: #1C170D;
+
+text-align: center;
+font-feature-settings: 'dlig' on;
+
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; 
+}
+.ending-part .section-content .explore{
+    width: 196px;
+height: 81px;
+
+padding: 0 20px;
+
+color: white;
+border-radius: 24px;
+background: #009963;
 
 
 
+text-align: center;
+font-feature-settings: 'dlig' on;
 
 
 
+font-size: 34px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px;
+transition: .3s ease;
+}
+.ending-part .section-content .explore:hover{
+    background: transparent;
+    color: #009963;
+    border:2px solid #009963;
+}
 
+.footer{
+    background: rgba(248, 213, 190, 0.90);
+    
+}
 
+.footer .footer-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:24px;
+    padding:40px;
+}
 
+.footer .footer-content .first-part{
+    display:flex;
+    gap:24px;
+}
 
-
-
+ .footer .footer-content .icons{
+    display: flex;
+    gap:16px;
+    
+}
